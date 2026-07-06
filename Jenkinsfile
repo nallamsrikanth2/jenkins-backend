@@ -60,6 +60,18 @@ pipeline {
                 }
                 }
             }
+      stage('Trigger Docker Pipeline') {
+            steps {
+                script {
+                def params = [
+                    string(name: 'appversion', value: $"{appversion}")]
+                build job: 'jenkins-backend-deoloy',
+                parameters: params,
+                wait: true
+            }
+            }
+      }
+    
 }
      post { 
         always { 
