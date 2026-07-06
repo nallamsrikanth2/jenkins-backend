@@ -10,7 +10,7 @@ pipeline {
     }
     environment {
         def appversion = ''
-        def nexusUrl = "http://nexusserver.nsrikanth.online:8081/"
+        def nexusUrl = "http://nexuserver.nsrikanth.online:8081/"
     }
     stages {
         stage('read the package version') {
