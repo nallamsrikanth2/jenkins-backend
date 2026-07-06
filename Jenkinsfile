@@ -65,7 +65,7 @@ pipeline {
                 script {
                 def params = [
                     string(name: 'appversion', value: "${appversion}")]
-                build job: 'jenkins-backend-deoloy',
+                build job: 'jenkins-backend-deploy',
                 parameters: params,
                 wait: true
             }
