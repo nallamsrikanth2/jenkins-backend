@@ -21,10 +21,17 @@ pipeline {
                 }
             }
         }
-        stage( 'build') {
+        stage ( 'build') {
             steps {
                 sh """
+                    npm install
                     ls -ltr
+                """
+            }
+        }
+        stage( 'deploy') {
+            steps {
+                sh """
                     zip -r -q backend-${appversion}.zip * -x Jenkinsfile -x backend-${appversion}.zip
                     ls -ltr
     
