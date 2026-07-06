@@ -21,5 +21,15 @@ pipeline {
                 }
             }
         }
+        stage( 'build') {
+            steps {
+                sh """
+                    ls -ltr
+                    zip -r -q backend-${appversion}.zip * -x Jenkinsfile -x backend-${appversion}.zip
+                    ls -ltr
+    
+                """
+            }
+        }
     }
 }
