@@ -74,7 +74,7 @@ pipeline {
                 }
                 }
             }
-      stage('Trigger Docker Pipeline') {
+      stage('Trigger Pipeline') {
             steps {
                 script {
                 def params = [
