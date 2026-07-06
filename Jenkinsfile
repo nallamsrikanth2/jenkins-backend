@@ -41,8 +41,8 @@ pipeline {
         }
         stage('nexus artifact uploder')
             steps {
-                script{
-                    nexusArtifactUploader(
+                 script {
+                        nexusArtifactUploader(
         nexusVersion: 'nexus3',
         protocol: 'http',
         nexusUrl: "${nexusUrl}",
